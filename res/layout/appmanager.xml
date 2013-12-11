@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="horizontal" >
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayoutLeftMargin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="20"
+        >
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/relativeLayoutCenterHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+		
+		<LinearLayout
+        	android:id="@+id/relativeLayoutTopCenter"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
+        	android:layout_weight="1"
+        	android:orientation="vertical"
+        	>
+    	
+    	<RelativeLayout
+        	android:id="@+id/relativeLayoutTopMargin"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
+        	android:layout_weight="19"
+        	>
+    	</RelativeLayout>
+        
+    
+            
+    	<LinearLayout
+        	android:id="@+id/relativeLayoutPopWindow"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
+        	android:background="@drawable/bg_guide"
+        	android:layout_weight="1"
+        	android:orientation="vertical"
+        	>
+        
+    		<RelativeLayout
+        		android:id="@+id/relativeLayoutTitle"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content" >
+
+    			<ImageButton
+    			    android:id="@+id/imageButtonBack"
+    			    android:layout_width="wrap_content"
+    			    android:layout_height="wrap_content"
+    			    android:layout_alignParentRight="true"
+    			    android:layout_alignParentTop="true"
+    			    android:layout_marginRight="10dip"
+    			    android:background="@drawable/btn_down1"
+    			    android:src="@drawable/btn_down1" />
+
+    			<TextView
+        			android:id="@+id/textViewName"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_alignParentLeft="true"
+        			android:layout_centerVertical="true"
+        			android:layout_marginLeft="10dip"
+        			android:gravity="center_vertical"
+        			android:text="Large Text"
+        			android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    		</RelativeLayout>
+
+    		<LinearLayout
+        		android:id="@+id/linearLayoutSeparator"
+        		android:layout_width="match_parent"
+        		android:layout_height="3dip"
+        		android:layout_marginLeft="10dip"
+        		android:layout_marginRight="10dip"
+        		android:background="@drawable/separator"
+        		android:orientation="vertical" >
+
+    		</LinearLayout>
+
+    		<FrameLayout
+    		    android:id="@+id/frameLayout"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="match_parent"
+    		    android:layout_marginLeft="6dip"
+    		    android:layout_marginRight="4dip" >
+
+	    			<GridView
+	    			    android:id="@+id/gridView"
+	    			    android:layout_width="match_parent"
+	    			    android:layout_height="match_parent"
+	    			    android:layout_marginBottom="4dip"
+	    			    android:layout_marginLeft="0dip"
+	    			    android:layout_marginRight="0dip"
+	    			    android:layout_marginTop="4dip"
+	    			    android:cacheColorHint="#00000000"
+	    			    android:horizontalSpacing="4dip"
+	    			    android:numColumns="4"
+	    			    android:verticalSpacing="4dip" >
+
+	    			</GridView>
+  
+		    		<ProgressBar
+		    		    android:id="@+id/progressBar"
+		    		    style="?android:attr/progressBarStyleLarge"
+		    		    android:layout_width="wrap_content"
+		    		    android:layout_height="wrap_content"
+		    		    android:layout_gravity="center"
+		    		    android:visibility="gone" />
+
+
+
+	    			<TextView
+	    			    android:id="@+id/textViewProgress"
+	    			    android:layout_width="wrap_content"
+	    			    android:layout_height="wrap_content"
+	    			    android:layout_gravity="center"
+	    			    android:text="Large Text"
+	    			    android:textAppearance="?android:attr/textAppearanceLarge"
+	    			    android:visibility="gone" />
+	    			    	    			    
+	    			    		
+    		</FrameLayout>
+    		    
+    	</LinearLayout>
+      	
+      	</LinearLayout>
+        
+    	<RelativeLayout
+        	android:id="@+id/relativeLayoutBottomMargin"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:layout_weight="9"
+        	>
+    	</RelativeLayout>
+  
+        	
+	</LinearLayout>
+	
+        
+	<RelativeLayout
+        android:id="@+id/relativeLayoutRightMargin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+
+	    android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="20"
+        >
+        
+    </RelativeLayout>
+    
+        	
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+<!-- 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+ -->
+
+    <ImageView
+        android:id="@+id/imageViewCheck"
+        android:layout_width="52dip"
+        android:layout_height="64dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:background="@drawable/btn_check_off"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_check_off" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageViewCheck"
+        android:scaleType="centerInside"
+        android:src="@drawable/appicon_default" />
+
+    <ImageView
+        android:id="@+id/imageViewCategory"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dip"
+        android:focusable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_0_1" />
+    
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageViewCategory"
+        android:layout_toRightOf="@id/imageView"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+ 
+    
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ImageButtonStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/icon_download_manage_downloading"
+        android:src="@drawable/icon_download_manage_downloading" />
+
+    <TextView
+        android:id="@+id/textViewProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="100%"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ImageButtonStatus"
+        android:layout_toLeftOf="@+id/textViewProgress"
+        >
+
+
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:layout_alignParentTop="true"
+           	android:layout_alignParentLeft="true"
+            >
+            
+            
+            <ImageView
+	            android:id="@+id/imageView"
+ 	           	android:layout_width="36dip"
+            	android:layout_height="36dip"
+            	android:layout_alignParentLeft="true"
+            	android:layout_alignParentTop="true"
+            	android:scaleType="centerInside"
+            	android:src="@drawable/appicon_default" />
+
+        	<TextView
+            	android:id="@+id/textView"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentTop="true"
+            	android:layout_toRightOf="@+id/imageView"
+            	android:text="Large Text"
+            	android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/RelativeLayoutTitle"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dip"
+                />
+            
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+        
+
+  
+    
+</RelativeLayout>

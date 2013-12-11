@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">易捷桌面</string>
+    <string name="set">确定</string>
+    <string name="cancel">取消</string>
+    <string name="text_0">社交聊天</string>
+    <string name="text_1">动作竞技</string>
+    <string name="text_2">休闲益智</string>
+    <string name="text_3">系统工具</string>
+    <string name="text_4">网络通信</string>
+    <string name="text_5">网购支付</string>
+    <string name="text_6">阅读新知</string>
+    <string name="text_7">音画视听</string>
+    <string name="text_8">琴棋书画</string>
+    <string name="text_9">交通旅行</string>
+    <string name="text_10">吃喝玩乐</string>
+    <string name="text_11">教育医疗</string>
+    <string name="text_12">生活爱好</string>
+    <string name="text_13">五花八门</string>
+    <string name="text_14">蒲公英榜</string>
+    <string name="text_15">PU--UP!</string>
+    <string name="stop">停止</string>
+    <string name="back">返回</string>
+
+</resources>

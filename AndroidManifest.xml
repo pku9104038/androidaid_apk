@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.aid"
+   
+    android:versionCode="26"
+    android:versionName="1.0.2.6" android:installLocation="internalOnly">
+
+    <uses-sdk android:targetSdkVersion="15" android:minSdkVersion="10"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    
+    <application android:icon="@drawable/icon_3gstone" 
+        android:screenOrientation="portrait" 
+        android:label="@string/app_name">
+        
+        <receiver android:name="AidWidget" android:label="@string/app_name">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/androidaidwidgetinfo" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver><receiver android:name="AndroidAidReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.UMS_CONNECTED" />
+                <action android:name="android.intent.action.UMS_DISCONNECTED" />
+                <action android:name="com.android.aid.action" />
+                <action android:name="com.android.aid.action.download_reporter" />
+                <action android:name="com.android.aid.action.install_reporter" />
+                <action android:name="com.android.aid.action.package_change" />
+                <action android:name="com.android.aid.action.start_downloading"/>
+                <action android:name="com.android.aid.action.launch_reporter"/>
+                <action android:name="com.android.aid.action.recent_task"/>
+                
+            </intent-filter>
+        </receiver><receiver android:name="AndroidAidPackageReceiver">
+            <intent-filter>
+            
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                     
+				<!--[color=red] 注意！！ 这句必须要加，否则接收不到BroadCast  [/color] -->
+                <data android:scheme="package"/>   
+            </intent-filter>
+            
+        </receiver>
+        
+        <service android:name="AndroidAidService"></service>
+        <provider android:name="DataProvider" android:authorities="com.android.aid"></provider>
+        
+        <activity android:name="AndroidAidActivity" android:theme="@android:style/Theme.NoTitleBar"> 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="AppManagerActivity"  android:theme="@style/Transparent" android:launchMode="singleTask">
+        
+        </activity><activity android:name="AppManagerRecent" android:theme="@style/Transparent" android:launchMode="singleTask">
+        
+        </activity><activity android:name="AppManagerMy" android:theme="@style/Transparent" android:launchMode="singleTask"></activity><activity android:name="AppManagerAddMy" android:theme="@style/Transparent"></activity><activity android:name="AppManagerDownloading" android:theme="@style/Transparent"></activity><activity android:name="AppManagerTools" android:theme="@style/Transparent">></activity>
+        
+        <activity android:name="ButtonIMActivity"  android:theme="@style/Transparent">
+            
+        </activity>
+        <activity android:name="ButtonGameActivity" android:theme="@style/Transparent"></activity> 
+        
+        
+        
+        <activity android:name="ButtonCameraActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonLifeActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonNewsActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonMusicActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonPictureActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonReadingActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonShoppingActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonToolsActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonTransportActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonVideoActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonWeatherActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="ButtonWebActivity" android:theme="@style/Transparent"></activity>
+        <activity android:name="AppManagerSynchronize" android:theme="@style/Transparent"></activity>
+        <activity android:theme="@style/Transparent" android:name="AppManagerAddMyCategory"></activity>
+        <activity android:name="AppManagerAddMyCategoryGrid" android:theme="@style/Transparent"></activity>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </application>
+    
+</manifest>
